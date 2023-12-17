@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.NoSuchWindowException;
@@ -23,6 +24,15 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CommonMethods extends PageInitializer {
+
+	public static void sendText(WebElement element, String text) {
+		element.clear();
+		element.sendKeys(text);
+	}
+
+	public static void clearText(WebElement element) {
+		element.clear();
+	}
 
 	// - clickOnMenuBar()
 	public static void clickOnMenuBar(List<WebElement> menuLocator, String menuItem) {
@@ -63,6 +73,7 @@ public class CommonMethods extends PageInitializer {
 			select.selectByIndex(indexValue);
 		}
 	}
+
 	// - ...Alert
 	public static void acceptAlert() {
 		try {
@@ -102,6 +113,7 @@ public class CommonMethods extends PageInitializer {
 		}
 
 	}
+
 	// - switchToIFrameBy.....
 	public static void switchToIFrameByIndex(int index) {
 		try {
@@ -126,9 +138,9 @@ public class CommonMethods extends PageInitializer {
 			e.printStackTrace();
 		}
 	}
-	
+
 	// - switchToChildWindow
-	
+
 	public static void switchToChildWindow(String parentWindowHandle) {
 		try {
 			Set<String> windowHandle = getDriver().getWindowHandles();
@@ -143,6 +155,7 @@ public class CommonMethods extends PageInitializer {
 			System.out.println(e.getMessage());
 		}
 	}
+
 	// - hardWait()
 	public static void hardWait(int seconds) {
 		try {
@@ -151,10 +164,11 @@ public class CommonMethods extends PageInitializer {
 			e.getStackTrace();
 		}
 	}
+
 	public static void softWait() {
 		getDriver().manage().timeouts().implicitlyWait(Constants.implicitWaitTime, TimeUnit.SECONDS);
 	}
-	
+
 	// - softWait()
 	public static WebDriverWait getWaitObject() {
 		WebDriverWait wait = new WebDriverWait(getDriver(), Constants.explicitWaitTime);
@@ -168,6 +182,7 @@ public class CommonMethods extends PageInitializer {
 	public static WebElement waitForVisibility(WebElement element) {
 		return getWaitObject().until(ExpectedConditions.visibilityOf(element));
 	}
+
 	// - click() and sendKeys() with softWait
 	public static void click(WebElement element) {
 		waitForVisibility(element).click();
@@ -176,7 +191,7 @@ public class CommonMethods extends PageInitializer {
 	public static void sendKey(WebElement element, String keys) {
 		waitForVisibility(element).sendKeys(keys);
 	}
-		
+
 	// - Action class
 	public static void hoverOverMouse(WebElement element) {
 		Actions action = new Actions(getDriver());
@@ -186,11 +201,15 @@ public class CommonMethods extends PageInitializer {
 	public static void dragAndDrop(WebElement sourceElement, WebElement targetElement) {
 		Actions action = new Actions(getDriver());
 		action.dragAndDrop(sourceElement, targetElement).build().perform();
-		;
 	}
-	
+
+	public static void deleteText(WebElement element) {
+		Actions action = new Actions(getDriver());
+		action.sendKeys(Keys.chord(Keys.CONTROL, "a",Keys.DELETE));
+	}
+
 	// - takeScreenShot
-	
+
 	public static void takeScreenShot(WebDriver driver) {
 
 		// create object to SimpleDataFormat class and decide the format

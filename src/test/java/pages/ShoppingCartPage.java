@@ -30,6 +30,32 @@ public class ShoppingCartPage {
 	@FindBy(xpath = "//strong[@class='subtitle empty']")
 	public WebElement emptyCart;
 	
+	@FindBy(xpath = "//div[@class='minicart-items-wrapper']/ol/li[1]//input[1]")
+	public WebElement qtyBoxFirstItem;
+	
+	@FindBy(xpath = "//button[@title='Update']")
+	public WebElement updateButton;
+	
+	@FindBy(xpath = "//input[@class='input-text qty']")
+	public WebElement QTYBoxInviewAndEditcart;
+	
+	@FindBy(xpath = "//button[@title='Update Shopping Cart']")
+	public WebElement updateShoppingCart;
+	
+	@FindBy(xpath = "//td[@class='col subtotal']")
+	public WebElement subTotal;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 
 }
