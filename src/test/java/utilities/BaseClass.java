@@ -10,12 +10,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
-import pages.AccountPage;
+import pages.HomePage;
 import pages.LogInPage;
 
 public class BaseClass {
@@ -58,20 +56,21 @@ public class BaseClass {
 	}
 
 	LogInPage lp = new LogInPage();
-	AccountPage ap = new AccountPage();
+	HomePage hp = new HomePage();
 
 	@BeforeMethod(alwaysRun = true)
 	public void login() {
-		lp.email.sendKeys(getProperty("email"));
-		lp.password.sendKeys(getProperty("password"));
-		lp.signInButton.click();
+		CommonMethods.click(lp.signIn);
+		CommonMethods.sendKey(lp.lumaEmail,getProperty("email"));
+		CommonMethods.sendKey(lp.lumaPassword,getProperty("password"));
+		CommonMethods.click(lp.lumaSignInButton);
 	}
 
 //	@AfterMethod(alwaysRun = true)
 	public void logOut() {
-		if (ap.customerMenu != null) {
-			ap.customerMenu.click();
-			CommonMethods.clickOnMenuBar(ap.customerMenuOptions, getProperty("CustomerMenuOptionSelected"));
+		if (hp.headerButton != null) {
+			hp.headerButton.click();
+			CommonMethods.clickOnMenuBar(hp.header, getProperty("Luma_HeaderOptionSelected"));
 		}
 	}
 

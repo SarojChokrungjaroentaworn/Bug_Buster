@@ -4,6 +4,7 @@ import pages.AccountPage;
 import pages.FooterPage;
 import pages.HomePage;
 import pages.HotSellerPage;
+import pages.ItemPage;
 import pages.LogInPage;
 import pages.NavigationBarPage;
 import pages.PaymentPage;
@@ -23,6 +24,7 @@ public class PageInitializer extends BaseClass{
 	public static SearchPage sp;
 	public static ShippingPage shp;
 	public static ShoppingCartPage scp;
+	public static ItemPage ip;
 	
 	
 	public static void initialize() {
@@ -36,6 +38,7 @@ public class PageInitializer extends BaseClass{
 		sp = new SearchPage();
 		shp = new ShippingPage();
 		scp = new ShoppingCartPage();
+		ip = new ItemPage();
 	}
 
 }

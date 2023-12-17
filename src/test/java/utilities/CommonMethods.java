@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
@@ -149,6 +150,9 @@ public class CommonMethods extends PageInitializer {
 		} catch (InterruptedException e) {
 			e.getStackTrace();
 		}
+	}
+	public static void softWait() {
+		getDriver().manage().timeouts().implicitlyWait(Constants.implicitWaitTime, TimeUnit.SECONDS);
 	}
 	
 	// - softWait()
