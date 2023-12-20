@@ -2,10 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
+  <suite started-at="2023-12-19T19:34:27 EST" name="Default suite" finished-at="2023-12-19T19:35:48 EST" duration-ms="81677">
+    <groups>
+    </groups>
+    <test started-at="2023-12-19T19:34:27 EST" name="Default test" finished-at="2023-12-19T19:35:48 EST" duration-ms="81677">
+      <class name="testcases.saroj.BB_TestCase_01">
+        <test-method is-config="true" signature="getDriver()[pri:0, instance:testcases.saroj.BB_TestCase_01@26f143ed]" started-at="2023-12-19T19:34:27 EST" name="getDriver" finished-at="2023-12-19T19:34:27 EST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test01 -->
-      </class> <!-- testcases.ExampleTestCase -->
+        </test-method> <!-- getDriver -->
+        <test-method is-config="true" signature="login()[pri:0, instance:testcases.saroj.BB_TestCase_01@26f143ed]" started-at="2023-12-19T19:34:27 EST" name="login" finished-at="2023-12-19T19:35:03 EST" duration-ms="36581" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="removeItemfromCart()[pri:0, instance:testcases.saroj.BB_TestCase_01@26f143ed]" started-at="2023-12-19T19:35:03 EST" name="removeItemfromCart" finished-at="2023-12-19T19:35:48 EST" duration-ms="45076" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeItemfromCart -->
+      </class> <!-- testcases.saroj.BB_TestCase_01 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
