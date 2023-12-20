@@ -1,12 +1,17 @@
 package testcases.saroj;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import utilities.CommonMethods;
+import utilities.ListensTestNG;
+import utilities.RetryAnalyzer;
 
+//@Listeners(ListensTestNG.class)
 public class BB_TestCase_01 extends CommonMethods {
 
+//	@Test(retryAnalyzer = RetryAnalyzer.class)
 	@Test
 	public void removeItemfromCart() {
 		getDriver();

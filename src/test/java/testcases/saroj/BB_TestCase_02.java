@@ -1,16 +1,20 @@
 package testcases.saroj;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import utilities.CommonMethods;
+import utilities.ListensTestNG;
+import utilities.RetryAnalyzer;
 
-public class BB_TestCase_02 extends CommonMethods{
-	
+@Listeners(ListensTestNG.class)
+public class BB_TestCase_02 extends CommonMethods {
+
 	@Test
 	public void addItemtoCart() {
 		getDriver();
-		clickOnMenuBar(hsp.hotSellerWidgetList,getProperty("ProductItemSelected_ForTestCase_BB_TestCase_02"));
+		clickOnMenuBar(hsp.hotSellerWidgetList, getProperty("ProductItemSelected_ForTestCase_BB_TestCase_02"));
 		click(ip.sizeS);
 		click(ip.colorblue);
 		click(ip.addToCartButton);
