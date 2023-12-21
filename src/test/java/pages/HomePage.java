@@ -17,7 +17,14 @@ public class HomePage {
 	@FindBy(xpath="//ul[@class='header links']/li")
 	public List<WebElement> header;
 
-
+	@FindBy(xpath="//a[@class='logo']")
+	public WebElement logo;
+	
+	@FindBy(xpath="//*[@id=\"ui-id-3\"]")
+	public WebElement whatnew;
+	
+	@FindBy(xpath="//*[@id=\"ui-id-8\"]")
+	public WebElement sale;
 	
 
 }
