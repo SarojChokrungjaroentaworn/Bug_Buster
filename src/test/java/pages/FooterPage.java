@@ -14,4 +14,7 @@ public class FooterPage {
 	
 	@FindBy(xpath = "//div[@class='footer content']/div/div/ul/li[3]/a")
 	public WebElement contactUsLink;
+	
+	@FindBy(xpath = "//*[@href=\"https://softwaretestingboard.com/subscribe/\"]")
+	public WebElement subscribeToMailingLink;
 }
