@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2023-12-27T15:44:07 EST" name="Default suite" finished-at="2023-12-27T15:44:13 EST" duration-ms="6684">
     <groups>
     </groups>
@@ -20,6 +21,67 @@
           </reporter-output>
         </test-method> <!-- removeItemfromCart -->
       </class> <!-- testcases.saroj.BB_TestCase_01 -->
+=======
+  <suite started-at="2023-12-22T14:07:20 CST" name="Default suite" finished-at="2023-12-22T14:07:25 CST" duration-ms="5538">
+    <groups>
+    </groups>
+    <test started-at="2023-12-22T14:07:20 CST" name="Default test" finished-at="2023-12-22T14:07:25 CST" duration-ms="5538">
+      <class name="testcases.christinethebaddie.CA_TestCase02">
+        <test-method is-config="true" signature="getDriver()[pri:0, instance:testcases.christinethebaddie.CA_TestCase02@680bddf5]" started-at="2023-12-22T14:07:20 CST" name="getDriver" finished-at="2023-12-22T14:07:20 CST" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDriver -->
+        <test-method is-config="true" signature="login()[pri:0, instance:testcases.christinethebaddie.CA_TestCase02@680bddf5]" started-at="2023-12-22T14:07:20 CST" name="login" finished-at="2023-12-22T14:07:22 CST" duration-ms="2530" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="subscribeSubmission()[pri:0, instance:testcases.christinethebaddie.CA_TestCase02@680bddf5]" started-at="2023-12-22T14:07:22 CST" name="subscribeSubmission" finished-at="2023-12-22T14:07:25 CST" duration-ms="2934" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Text verification failed. expected [Almost finished... We need to confirm your email address. To complete the subscription process, please click the link in the email we just sent you.] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Text verification failed. expected [Almost finished... We need to confirm your email address. To complete the subscription process, please click the link in the email we just sent you.] but found []
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at testcases.christinethebaddie.CA_TestCase02.subscribeSubmission(CA_TestCase02.java:36)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- subscribeSubmission -->
+      </class> <!-- testcases.christinethebaddie.CA_TestCase02 -->
+>>>>>>> 3ae2ccaeb12854754d985d3fb6325bc6257a8b96
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,6 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="testcases.saroj.BB_TestCase_01">
         <methods>
           <include name="getDriver"/>
@@ -10,6 +11,15 @@
           <include name="removeItemfromCart"/>
         </methods>
       </class> <!-- testcases.saroj.BB_TestCase_01 -->
+=======
+      <class name="testcases.christinethebaddie.CA_TestCase02">
+        <methods>
+          <include name="getDriver"/>
+          <include name="subscribeSubmission"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- testcases.christinethebaddie.CA_TestCase02 -->
+>>>>>>> 3ae2ccaeb12854754d985d3fb6325bc6257a8b96
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
