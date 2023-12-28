@@ -27,6 +27,7 @@ public class PageInitializer extends BaseClass{
 	public static ItemPage ip;
 	
 	
+	
 	public static void initialize() {
 		hp = new HomePage();
 		lp = new LogInPage();
@@ -39,6 +40,7 @@ public class PageInitializer extends BaseClass{
 		shp = new ShippingPage();
 		scp = new ShoppingCartPage();
 		ip = new ItemPage();
+		
 	}
 
 }
