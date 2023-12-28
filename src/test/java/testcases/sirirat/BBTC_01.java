@@ -28,6 +28,14 @@ public class BBTC_01 extends CommonMethods {
 		scrollDown(500);
 		takeScreenShot(getDriver());
 		
+		
+		
+		
+		
+		
+		
+		
+		
 //		String firstItemPriceString = ip.firstItemPrice.getText(); 
 //		
 //        firstItemPriceString = firstItemPriceString.substring(1);
