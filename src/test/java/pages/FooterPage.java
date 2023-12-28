@@ -21,5 +21,8 @@ public class FooterPage {
 	@FindBy(xpath = "//div[@id='mce-success-response']")
 	public WebElement textStatusSubsribe;
 	
+	@FindBy(xpath = "//div[@class='mce_inline_error']")
+	public WebElement textElement;
+	
 	
 }
