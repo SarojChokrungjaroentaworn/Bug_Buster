@@ -41,5 +41,15 @@ public class ItemPage {
 	
 	@FindBy(xpath = "//strong[@class='subtitle empty']")
 	public WebElement emptyCart;
+	
+	@FindBy(xpath = "//select[@id='sorter']/option[2]")
+	public WebElement sortByName;
+	
+	@FindBy(xpath = "//select[@id='sorter']/option[3]")
+	public WebElement sortByPrice;
+	
+	@FindBy(xpath = "//div[@data-price-box='product-id-1556']//span[@class='price']")
+    public WebElement firstItemPrice;
+	
 
 }
