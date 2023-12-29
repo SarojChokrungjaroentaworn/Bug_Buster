@@ -224,7 +224,12 @@ public class CommonMethods extends PageInitializer {
 		Actions action = new Actions(getDriver());
 		action.sendKeys(Keys.chord(Keys.CONTROL, "a",Keys.DELETE));
 	}
-
+	
+	public static void clickingOnLink(WebElement link) {
+		Actions action = new Actions(getDriver());
+		action.moveToElement(link).click().perform();
+	}
+	
 	// - takeScreenShot
 
 	public static void takeScreenShot(WebDriver driver) {
