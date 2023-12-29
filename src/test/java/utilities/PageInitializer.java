@@ -29,6 +29,7 @@ public class PageInitializer extends BaseClass{
 	public static SubscribePage subp;
 	
 	
+	
 	public static void initialize() {
 		hp = new HomePage();
 		lp = new LogInPage();
@@ -42,6 +43,7 @@ public class PageInitializer extends BaseClass{
 		scp = new ShoppingCartPage();
 		ip = new ItemPage();
 		subp = new SubscribePage();
+
 	}
 
 }

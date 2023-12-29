@@ -1,6 +1,7 @@
 package utilities;
 
 import java.io.File;
+
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -10,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchFrameException;
@@ -33,6 +35,7 @@ public class CommonMethods extends PageInitializer {
 	public static void clearText(WebElement element) {
 		element.clear();
 	}
+	
 
 	// - clickOnMenuBar()
 	public static void clickOnMenuBar(List<WebElement> menuLocator, String menuItem) {
@@ -191,6 +194,20 @@ public class CommonMethods extends PageInitializer {
 	public static void sendKey(WebElement element, String keys) {
 		waitForVisibility(element).sendKeys(keys);
 	}
+	
+	
+	// Method to get jsExecutor **
+	public static JavascriptExecutor getJSObject() {
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		return js;
+	}
+	
+	// Method that will scroll the page down based on the passed pixel parameters ** 
+		public static void scrollDown(int pixel) {
+			getJSObject().executeScript("window.scrollBy(0," + pixel + ")");
+		}
+	
+	
 
 	// - Action class
 	public static void hoverOverMouse(WebElement element) {
@@ -222,7 +239,7 @@ public class CommonMethods extends PageInitializer {
 		// get the current date time with LocalDateTime
 		LocalDateTime now = LocalDateTime.now();
 		// convert the date into the string with the specified format
-		String dateString = now.format(formatter);
+		String dateString = now.format(formatter);				
 		// casting webDriver to takescreenshot
 		TakesScreenshot screenshot = (TakesScreenshot) driver;
 		// get the screenshot as an outputFile
@@ -230,7 +247,7 @@ public class CommonMethods extends PageInitializer {
 		// define the destination path with the unique name
 		String desFilePath = "src/test/resources/screenshots/Testing_" + dateString + ".png";
 		File desFile = new File(desFilePath);
-		// Use FileUtils to copy the screenshot to the dest
+		// Use FileUtils to copy the screenshot to the destination
 		try {
 			FileUtils.copyFile(srcFile, desFile);
 		} catch (IOException e) {
