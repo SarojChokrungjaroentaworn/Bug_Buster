@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -48,8 +50,14 @@ public class ItemPage {
 	@FindBy(xpath = "//select[@id='sorter']/option[3]")
 	public WebElement sortByPrice;
 	
+	@FindBy(xpath = "//ol[@class='products list items product-items']/li//span[@class='price']")
+	public List<WebElement> listItemAfterSort;
+	
 	@FindBy(xpath = "//div[@data-price-box='product-id-1556']//span[@class='price']")
     public WebElement firstItemPrice;
+	
+	@FindBy(xpath = "//div[@data-price-box='product-id-1652']")
+	public WebElement secondItemPrice;
 	
 
 }
