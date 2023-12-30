@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.christinethebaddie.CA_TestCase02">
+      <class name="testcases.sirirat.BBTC_03">
         <methods>
           <include name="getDriver"/>
-          <include name="subscribeSubmission"/>
           <include name="login"/>
+          <include name="adRedirection"/>
         </methods>
-      </class> <!-- testcases.christinethebaddie.CA_TestCase02 -->
+      </class> <!-- testcases.sirirat.BBTC_03 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

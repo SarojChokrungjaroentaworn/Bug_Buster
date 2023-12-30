@@ -31,7 +31,6 @@ public class HomePage {
 
 	@FindBy(xpath = "//ul[@class='level0 submenu ui-menu ui-widget ui-widget-content ui-corner-all']/li")
 	public List<WebElement> subTopBarMenu;
-
 	
 	//Women
 	@FindBy(xpath ="//*[@id='ui-id-4']")
