@@ -27,6 +27,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CommonMethods extends PageInitializer {
 
+	// Text
 	public static void sendText(WebElement element, String text) {
 		element.clear();
 		element.sendKeys(text);
@@ -35,7 +36,6 @@ public class CommonMethods extends PageInitializer {
 	public static void clearText(WebElement element) {
 		element.clear();
 	}
-	
 
 	// - clickOnMenuBar()
 	public static void clickOnMenuBar(List<WebElement> menuLocator, String menuItem) {
@@ -56,7 +56,7 @@ public class CommonMethods extends PageInitializer {
 		}
 	}
 
-	// - selectDropDownBy...
+	// - selectDropDownBy
 	public static void selectDropDownByVisibleText(WebElement element, String textToBeSelected) {
 		Select select = new Select(element);
 		List<WebElement> options = select.getOptions();
@@ -77,7 +77,7 @@ public class CommonMethods extends PageInitializer {
 		}
 	}
 
-	// - ...Alert
+	// Alert
 	public static void acceptAlert() {
 		try {
 			Alert alert = getDriver().switchTo().alert();
@@ -117,7 +117,7 @@ public class CommonMethods extends PageInitializer {
 
 	}
 
-	// - switchToIFrameBy.....
+	// - switchToIFrameBy
 	public static void switchToIFrameByIndex(int index) {
 		try {
 			getDriver().switchTo().frame(index);
@@ -143,7 +143,6 @@ public class CommonMethods extends PageInitializer {
 	}
 
 	// - switchToChildWindow
-
 	public static void switchToChildWindow(String parentWindowHandle) {
 		try {
 			Set<String> windowHandle = getDriver().getWindowHandles();
@@ -168,11 +167,11 @@ public class CommonMethods extends PageInitializer {
 		}
 	}
 
+	// - softWait()
 	public static void softWait() {
 		getDriver().manage().timeouts().implicitlyWait(Constants.implicitWaitTime, TimeUnit.SECONDS);
 	}
 
-	// - softWait()
 	public static WebDriverWait getWaitObject() {
 		WebDriverWait wait = new WebDriverWait(getDriver(), Constants.explicitWaitTime);
 		return wait;
@@ -188,26 +187,23 @@ public class CommonMethods extends PageInitializer {
 
 	// - click() and sendKeys() with softWait
 	public static void click(WebElement element) {
-		waitForVisibility(element).click();
+		waitForClickability(element).click();
 	}
 
 	public static void sendKey(WebElement element, String keys) {
 		waitForVisibility(element).sendKeys(keys);
 	}
-	
-	
+
 	// Method to get jsExecutor **
 	public static JavascriptExecutor getJSObject() {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		return js;
 	}
-	
-	// Method that will scroll the page down based on the passed pixel parameters ** 
-		public static void scrollDown(int pixel) {
-			getJSObject().executeScript("window.scrollBy(0," + pixel + ")");
-		}
-	
-	
+
+	// Method that will scroll the page down based on the passed pixel parameters **
+	public static void scrollDown(int pixel) {
+		getJSObject().executeScript("window.scrollBy(0," + pixel + ")");
+	}
 
 	// - Action class
 	public static void hoverOverMouse(WebElement element) {
@@ -220,18 +216,12 @@ public class CommonMethods extends PageInitializer {
 		action.dragAndDrop(sourceElement, targetElement).build().perform();
 	}
 
-	public static void deleteText(WebElement element) {
-		Actions action = new Actions(getDriver());
-		action.sendKeys(Keys.chord(Keys.CONTROL, "a",Keys.DELETE));
-	}
-	
 	public static void clickingOnLink(WebElement link) {
 		Actions action = new Actions(getDriver());
 		action.moveToElement(link).click().perform();
 	}
-	
-	// - takeScreenShot
 
+	// - takeScreenShot
 	public static void takeScreenShot(WebDriver driver) {
 
 		// create object to SimpleDataFormat class and decide the format
@@ -239,7 +229,7 @@ public class CommonMethods extends PageInitializer {
 		// get the current date time with LocalDateTime
 		LocalDateTime now = LocalDateTime.now();
 		// convert the date into the string with the specified format
-		String dateString = now.format(formatter);				
+		String dateString = now.format(formatter);
 		// casting webDriver to takescreenshot
 		TakesScreenshot screenshot = (TakesScreenshot) driver;
 		// get the screenshot as an outputFile
@@ -254,6 +244,68 @@ public class CommonMethods extends PageInitializer {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	// check ascending and descending sort
+	public static boolean ascendingCompare(double[] input) {
+		for (int i = 0; i < input.length - 1; i++) {
+			if (input[i] > input[i + 1]) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public static boolean descendingCompare(double[] input) {
+		for (int i = 0; i < input.length - 1; i++) {
+			if (input[i] < input[i + 1]) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public static boolean priceRangeCompare(double[] input, String min, String max) {
+		double minn = Double.parseDouble(min);
+		double maxx = Double.parseDouble(max);
+
+		for (int i = 0; i < input.length; i++) {
+			if (input[i] >= minn && input[i] <= maxx)
+				return true;
+		}
+		return false;
+	}
+
+	// get list of price
+	public static double[] getPriceList(List<WebElement> input) {
+		int index = 0;
+		double[] output = new double[input.size()];
+		for (WebElement each : input) {
+			// get price each item in String with $
+			String itemPriceString = each.getText();
+			// delete $
+			itemPriceString = itemPriceString.substring(1);
+			// change String to double
+			double itemPriceDouble = Double.parseDouble(itemPriceString);
+			// input each double into double array
+			output[index++] = itemPriceDouble;
+		}
+		return output;
+	}
+
+	// Check String contains in another String
+	public static boolean compare(String actual, String expected) {
+		return actual.contains(expected);
+	}
+
+	public static boolean compareStringInList(List<WebElement> input, String expected) {
+
+		for (WebElement each : input) {
+			if (expected.contains(each.getText())) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 }

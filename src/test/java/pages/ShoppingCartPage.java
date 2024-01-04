@@ -45,6 +45,9 @@ public class ShoppingCartPage {
 	@FindBy(xpath = "//td[@class='col subtotal']")
 	public WebElement subTotal;
 	
+	@FindBy(xpath = "//div[@class='new-address-popup']/button")
+	public WebElement addNewAddress;
+	
 	
 	
 	

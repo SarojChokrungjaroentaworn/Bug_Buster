@@ -34,7 +34,32 @@ public class HomePage {
 	
 	//Women
 	@FindBy(xpath ="//*[@id='ui-id-4']")
-	public WebElement topBarMenuOptionWomen;
+	public WebElement women;
+	
+	//Men
+	@FindBy(xpath ="//ul[@id='ui-id-2']//a[@id='ui-id-5']")
+	public WebElement men;
+	
+	@FindBy(xpath ="//a[@id='ui-id-17']")
+	public WebElement topInMen;
+	
+	@FindBy(xpath ="//a[@id='ui-id-21']")
+	public WebElement teesInTopInMen;
+	
+	@FindBy(xpath ="//div[@class='filter-options']/div[3]")
+	public WebElement priceOptions;
+	
+	@FindBy(xpath ="//div[@class='filter-options']/div[2]")
+	public WebElement sizeOptions;
+	
+	@FindBy(xpath = "//*[@id=\"narrow-by-list\"]/div[2]/div[2]/div/div/a[2]/div")
+	public WebElement sizeSInOptionMenu;
+	
+	@FindBy(xpath ="//*[@id=\"narrow-by-list\"]/div[3]/div[2]/ol/li[1]/a")
+	public WebElement firstPriceOptions;
+	
+	@FindBy(xpath = "//ol[@class='items']/li")
+	public List<WebElement> ListOptions;
 	
 	//Women SubTops
 	@FindBy(xpath ="//dl[@id='narrow-by-list2']//ol/li[1]")
