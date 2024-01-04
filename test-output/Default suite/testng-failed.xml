@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.sirirat.BBTC_03">
+      <class name="testcases.saroj.TestForMember">
         <methods>
           <include name="getDriver"/>
           <include name="login"/>
-          <include name="adRedirection"/>
+          <include name="testOnly"/>
         </methods>
-      </class> <!-- testcases.sirirat.BBTC_03 -->
+      </class> <!-- testcases.saroj.TestForMember -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

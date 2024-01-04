@@ -53,11 +53,41 @@ public class ItemPage {
 	@FindBy(xpath = "//ol[@class='products list items product-items']/li//span[@class='price']")
 	public List<WebElement> listItemAfterSort;
 	
+	@FindBy(xpath = "//ol[@class='products list items product-items']/li//span[@class='price']")
+	public List<WebElement> listItemWithPriceOptions;
+	
 	@FindBy(xpath = "//div[@data-price-box='product-id-1556']//span[@class='price']")
     public WebElement firstItemPrice;
 	
 	@FindBy(xpath = "//div[@data-price-box='product-id-1652']")
 	public WebElement secondItemPrice;
+	
+	@FindBy(xpath = "//div[@id='narrow-by-list']/div")
+	public List<WebElement> leftBarMenu;
+	
+	@FindBy(xpath = "//*[@id='narrow-by-list']/div[2]/div[2]/div/div")
+	public List<WebElement> sizeList;
+	
+	@FindBy(xpath = "//div[@class='filter-options-content']/ol/li")
+	public List<WebElement> subLeftMenu;
+	
+	@FindBy(xpath = "//div[@class='filter-options-content']/ol/li[4]/a")
+	public WebElement everCool;
+	
+	@FindBy(xpath = "//div[@class='product details product-item-details']")
+	public WebElement teesSBlackEverCoolItemDetail;
+	
+	@FindBy(xpath = "//div[@class='filter-current']/ol/li//span[@class='filter-value']")
+	public List<WebElement> nowShoppingByList;
+	
+	@FindBy(xpath = "//div[@class='product-addto-links']/a[1]")
+	public WebElement addToWishListButton;
+	
+	@FindBy(xpath = "//div[@role='alert']")
+	public WebElement addToWishListtext;
+	
+	
+	
 	
 
 }
