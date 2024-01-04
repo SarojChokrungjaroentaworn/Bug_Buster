@@ -32,7 +32,11 @@ public class HomePage {
 	@FindBy(xpath = "//ul[@class='level0 submenu ui-menu ui-widget ui-widget-content ui-corner-all']/li")
 	public List<WebElement> subTopBarMenu;
 	
-	//Women
+
+	@FindBy(xpath = "//a[@id=\"ui-id-6\"]")
+	public WebElement gear;
+
+  //Women
 	@FindBy(xpath ="//*[@id='ui-id-4']")
 	public WebElement women;
 	
@@ -64,10 +68,9 @@ public class HomePage {
 	//Women SubTops
 	@FindBy(xpath ="//dl[@id='narrow-by-list2']//ol/li[1]")
 	public WebElement womenSubMunuTop;
-	
 
-    @FindBy(xpath = "//dl[@id='narrow-by-list2']//ol/li[1]/a")
-    public WebElement topInWoman;
+   @FindBy(xpath = "//dl[@id='narrow-by-list2']//ol/li[1]/a")
+   public WebElement topInWoman;
     
     
 //    @FindBy(xpath = "//select[@id='sorter']/option[3]")
