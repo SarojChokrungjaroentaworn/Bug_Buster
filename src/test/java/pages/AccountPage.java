@@ -20,6 +20,11 @@ public class AccountPage {
 	@FindBy(xpath="//div[@class='customer-menu']/ul/li")
 	public List<WebElement> customerMenuOptions;
 	
+	@FindBy(xpath="//ol[@class='product-items']/li//strong[@class='product-item-name']")
+	public List<WebElement> myWishList;
+	
+	
+	
 	
 	
 	
