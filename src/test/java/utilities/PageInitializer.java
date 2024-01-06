@@ -2,6 +2,7 @@ package utilities;
 
 import pages.AccountPage;
 import pages.FooterPage;
+import pages.GearPage;
 import pages.HomePage;
 import pages.HotSellerPage;
 import pages.ItemPage;
@@ -11,6 +12,7 @@ import pages.PaymentPage;
 import pages.SearchPage;
 import pages.ShippingPage;
 import pages.ShoppingCartPage;
+import pages.SubscribePage;
 
 public class PageInitializer extends BaseClass{
 	
@@ -25,7 +27,8 @@ public class PageInitializer extends BaseClass{
 	public static ShippingPage shp;
 	public static ShoppingCartPage scp;
 	public static ItemPage ip;
-	
+	public static GearPage gp;
+	public static SubscribePage subp;
 	
 	public static void initialize() {
 		hp = new HomePage();
@@ -39,6 +42,8 @@ public class PageInitializer extends BaseClass{
 		shp = new ShippingPage();
 		scp = new ShoppingCartPage();
 		ip = new ItemPage();
+		gp = new GearPage();
+		subp = new SubscribePage();
 	}
 
 }

@@ -44,7 +44,7 @@ public class ShippingPage {
 	@FindBy(xpath = "//input[@name='telephone']")
 	public WebElement phoneNumber;
 
-	@FindBy(xpath = "//button[@class='button action continue primary']")
+	@FindBy(xpath = "//div[@id='shipping-method-buttons-container']//button[@type='submit']/span")
 	public WebElement nextButton;
 
 	@FindBy(xpath = "//table[@class='table-checkout-shipping-method']/tbody/tr")
@@ -52,5 +52,14 @@ public class ShippingPage {
 
 	@FindBy(xpath = "//table[@class='table-checkout-shipping-method']/tbody/tr[1]")
 	public WebElement shippingMethodTableRate;
+	
+	@FindBy(xpath = "//footer[@class='modal-footer']/button[@class='action primary action-save-address']")
+	public WebElement shipHereButton;
+	
+	@FindBy(xpath = "//input[@id='billing-address-same-as-shipping-checkmo']")
+	public WebElement shippingAndBillingIsSame;
+	
+	@FindBy(xpath = "//div[@class='billing-address-details']")
+	public WebElement shippingAddressDetail;
 
 }
