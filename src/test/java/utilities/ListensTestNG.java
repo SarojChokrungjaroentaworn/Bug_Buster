@@ -4,8 +4,8 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class ListensTestNG extends CommonMethods implements ITestListener{
-	
+public class ListensTestNG extends CommonMethods implements ITestListener {
+
 	@Override
 	public void onTestStart(ITestResult result) {
 		System.out.println("New Test start: " + result.getName());
@@ -20,6 +20,10 @@ public class ListensTestNG extends CommonMethods implements ITestListener{
 	public void onTestFailure(ITestResult result) {
 		System.out.println("Test has failed: " + result.getName());
 		takeScreenShot(getDriver());
+		if (hp.headerButton != null) {
+			hp.headerButton.click();
+			CommonMethods.clickOnMenuBar(hp.header, getProperty("Luma_HeaderOptionSelected"));
+		}
 	}
 
 	@Override
