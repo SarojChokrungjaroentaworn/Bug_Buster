@@ -24,9 +24,8 @@ public class AccountPage {
 	public List<WebElement> myWishList;
 	
 	
-	
-	
-	
+	@FindBy(xpath="//td[@class='cell product info']//strong[@class='product-item-name']")
+	public List<WebElement> addToCompareList;
 	
 
 	
