@@ -86,7 +86,24 @@ public class ItemPage {
 	@FindBy(xpath = "//div[@role='alert']")
 	public WebElement addToWishListtext;
 	
+	//Ngan
+	@FindBy(xpath = "//*[@id=\"option-label-size-143-item-168\"]")
+	public WebElement sizeM;
+
+	@FindBy(xpath = "//*[@id=\"option-label-color-93-item-53\"]")
+	public WebElement colorGreen;
 	
+	@FindBy(xpath="//*[@id=\"maincontent\"]/div[2]/div/div[2]/div[5]/div/a[2]/span")
+	public WebElement addToCompareButton;
+	
+	@FindBy(xpath="//*[@id=\"maincontent\"]/div[1]/div[2]/div/div/div/a")
+	public WebElement comparisonList;
+	
+	@FindBy(xpath ="//*[@id='maincontent']/div[3]/div[1]/div[3]/div[2]/ol/li[1]/div/a/span/span/img")
+	public WebElement montanaJacket;
+		
+	@FindBy(xpath = "//*[@id='maincontent']/div[3]/div[1]/div[3]/div[2]/ol/li[1]/div/a/span/span/img")
+	 public WebElement heroHoodie;
 	
 	
 

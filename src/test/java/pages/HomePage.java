@@ -80,5 +80,14 @@ public class HomePage {
 //	@FindBy(xpath = "//select[@id='sorter']/option[@value='name']")
 //	public WebElement sortByName;
 	
+   
+   //Ngan
+	@FindBy(xpath="//*[@id=\"ui-id-3\"]")
+	public WebElement whatnew;
 	
+	@FindBy(xpath="//*[@id=\"ui-id-8\"]")
+	public WebElement sale;
+	
+	@FindBy(xpath="//a[@class='logo']")
+	public WebElement logo;
 }
