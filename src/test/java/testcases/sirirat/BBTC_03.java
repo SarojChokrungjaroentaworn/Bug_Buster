@@ -12,7 +12,6 @@ public class BBTC_03 extends CommonMethods {
 	@Test
 	public void sortFunction() {
 
-		getDriver();
 		// click Woman menu
 		click(hp.women);
 		// click Top menu
@@ -20,7 +19,7 @@ public class BBTC_03 extends CommonMethods {
 		// click sort by price
 		click(ip.sortByPrice);
 		// compare price after we ascending sort by price
-		Assert.assertTrue(ascendingCompare(getPriceList(ip.listItemAfterSort)));
+		Assert.assertTrue(isAscendingOrder(getPriceList(ip.listItemAfterSort)));
 
 	}
 }

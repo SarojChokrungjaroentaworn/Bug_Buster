@@ -20,6 +20,9 @@ public class ShoppingCartPage {
 
 	@FindBy(xpath = "//button[@class='action-primary action-accept']")
 	public WebElement okToDeleteItem;
+	
+	@FindBy(xpath = "//footer[@class='modal-footer']/button[2]")
+	public WebElement deleteItem;
 
 	@FindBy(xpath = "//a[@class='action viewcart']")
 	public WebElement viewAndEditCart;
@@ -47,6 +50,13 @@ public class ShoppingCartPage {
 	
 	@FindBy(xpath = "//div[@class='new-address-popup']/button")
 	public WebElement addNewAddress;
+	
+//	@FindBy(xpath = "//input[@data-role='cart-item-qty']")
+//	public WebElement qtyTextBox;
+	
+	@FindBy(xpath = "//div[@class='details-qty qty']/input")
+	public WebElement qtyTextBox;
+
 	
 	
 	

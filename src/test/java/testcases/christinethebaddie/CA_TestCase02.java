@@ -13,10 +13,7 @@ public class CA_TestCase02 extends CommonMethods {
 
 	@Test
 	public void subscribeSubmission() {
-		
-		// Initializing the WebDriver
-		getDriver();
-		
+
 		// Simulating a click on the subscribe link
 		click(fp.subscribeToMailingLink);
 		

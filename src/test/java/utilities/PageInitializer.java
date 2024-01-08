@@ -1,6 +1,7 @@
 package utilities;
 
 import pages.AccountPage;
+import pages.ContactUsPage;
 import pages.FooterPage;
 import pages.GearPage;
 import pages.HomePage;
@@ -18,6 +19,7 @@ public class PageInitializer extends BaseClass{
 	
 	public static HomePage hp;
 	public static LogInPage lp;
+	public static ContactUsPage cp;	
 	public static AccountPage ap;
 	public static FooterPage fp;
 	public static HotSellerPage hsp;
@@ -33,6 +35,7 @@ public class PageInitializer extends BaseClass{
 	public static void initialize() {
 		hp = new HomePage();
 		lp = new LogInPage();
+		cp = new ContactUsPage();
 		ap = new AccountPage();
 		fp = new FooterPage();
 		hsp = new HotSellerPage();

@@ -14,9 +14,10 @@ public class HotSellerPage {
 		PageFactory.initElements(BaseClass.getDriver(), this);
 	}
 
-	@FindBy(xpath = "//ol[@class='product-items widget-product-grid']/li")
+	@FindBy(xpath = "//ol[@class='product-items widget-product-grid']/li//strong[@class='product-item-name']/a")
 	public List<WebElement> hotSellerWidgetList;
 
-	
+	@FindBy(xpath = "//ol[@class='product-items widget-product-grid']/li[1]/div/a")
+	public WebElement radiantTee;
 
 }

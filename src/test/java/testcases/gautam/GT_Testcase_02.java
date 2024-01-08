@@ -14,7 +14,7 @@ public class GT_Testcase_02 extends CommonMethods {
 		hoverOverMouse(hp.topInMen);
 		click(hp.teesInTopInMen);
 		clickOnMenuBar(ip.leftBarMenu, getProperty("Gautam_TestCase_02_LeftBar_Option2"));
-		click(hp.sizeSInOptionMenu);
+		click(ip.sizeSInLeftBarMenu);
 		clickOnMenuBar(ip.leftBarMenu, getProperty("Gautam_TestCase_02_LeftBar_Option3"));
 		clickOnMenuBar(hp.ListOptions, getProperty("Gautam_TestCase_02_Price_Range"));
 		clickOnMenuBar(ip.leftBarMenu, getProperty("Gautam_TestCase_02_LeftBar_Option5"));

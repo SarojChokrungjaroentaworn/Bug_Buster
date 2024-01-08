@@ -15,7 +15,7 @@ public class ListensTestNG extends CommonMethods implements ITestListener{
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		System.out.println("Test successfully executeed: " + result.getName());
+		System.out.println("Test successfully executed: " + result.getName());
 
 	}
 
@@ -27,12 +27,12 @@ public class ListensTestNG extends CommonMethods implements ITestListener{
 
 	@Override
 	public void onStart(ITestContext context) {
-		System.out.println("on Start started");
+		System.out.println("Bug Busters project test start");
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {
-		System.out.println("on Finish Method");
+		System.out.println("Bug Busters project test finished");
 	}
 	
 
