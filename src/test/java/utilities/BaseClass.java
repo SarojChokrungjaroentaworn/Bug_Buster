@@ -6,11 +6,11 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -85,7 +85,7 @@ public class BaseClass {
 	}
 
 	// driver tear down method
-//	 @AfterClass(alwaysRun = true)
+	 @AfterClass(alwaysRun = true)
 	public static void tearDown() {
 		if (getDriver() != null) {
 			getDriver().close();
@@ -100,7 +100,7 @@ public class BaseClass {
 	static {
 		try {
 			// path to the file locaiton
-			String filePath = "src/test/resources/properties/UserDataFile.properties";
+			String filePath = Constants.propertiesFilePath;
 			// open connection to the file
 			FileInputStream fis = new FileInputStream(filePath);
 			properties = new Properties();
