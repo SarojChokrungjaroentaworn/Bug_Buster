@@ -34,21 +34,16 @@ public class HomePage {
 
 	@FindBy(xpath = "//a[@id=\"ui-id-6\"]")
 	public WebElement gear;
-
-	@FindBy(xpath = "//*[@id=\"ui-id-9\"]") 
-	public WebElement topInWoman;
 	   
 	@FindBy(xpath = "//*[@id='ui-id-11']")
 	public WebElement JacketsInTops;
 	
-	//Men
-	@FindBy(xpath ="//ul[@id='ui-id-2']//a[@id='ui-id-5']")
+	@FindBy(xpath = "//a[@id='ui-id-5']")
+	public WebElement men;
 	
   // Women
 	@FindBy(xpath = "//*[@id='ui-id-4']")
 	public WebElement women;
-
-	public WebElement men;
 
 	@FindBy(xpath = "//a[@id='ui-id-17']")
 	public WebElement topInMen;
