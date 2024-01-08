@@ -16,7 +16,7 @@ public class BT_01 extends CommonMethods {
 		click(ip.sizeS);
 		click(ip.colorblack);
 		click(ip.addToCartButton);
-		hardWait(1);
+		hardWait(2);
 		click(ip.goToCart);
 		click(scp.proceedCheckOut);
 		hardWait(1);
@@ -34,7 +34,8 @@ public class BT_01 extends CommonMethods {
 		click(shp.nextButton);
 		hardWait(1);
 		click(shp.shippingAndBillingIsSame);
-		Assert.assertTrue(compare(shp.shippingAddressDetail.getText(),getProperty("Checkout_TestCase_01_ExpectedResult")));
-
+		Assert.assertTrue(
+				compare(shp.shippingAddressDetail.getText(), getProperty("Checkout_TestCase_01_ExpectedResult")));
+		removeItem();
 	}
 }

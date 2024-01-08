@@ -40,4 +40,9 @@ public WebElement AddSpriteFoamRollerToCart;
 
 @FindBy(xpath = "//div[@data-bind= \"html: $parent.prepareMessageForHtml(message.text)\"]")
 public WebElement SpriteRollerAddedToCartVerification;
+
+@FindBy(xpath = "//ol[@class='products list items product-items']/li[1]//a[@class='action view']")
+public WebElement reviewButtonOfFirstItem;
+
+
 }

@@ -9,9 +9,6 @@ public class CA_TestCase01 extends CommonMethods {
 	@Test
 	public void ContactUsLinkVerification() {
 		
-		// Initializing the webDriver
-		getDriver();
-		
 		// Clicking on the 'Contact Us' link
 		click(fp.contactUsLink);
 

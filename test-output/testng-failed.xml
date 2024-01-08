@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.ngan.TestCase03">
+      <class name="testcases.saroj.Saroj_TestCase">
         <methods>
+          <include name="updateQuantityInCart"/>
+          <include name="logOut"/>
           <include name="getDriver"/>
           <include name="login"/>
-          <include name="addToWishList"/>
         </methods>
-      </class> <!-- testcases.ngan.TestCase03 -->
+      </class> <!-- testcases.saroj.Saroj_TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
