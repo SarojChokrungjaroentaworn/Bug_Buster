@@ -36,9 +36,20 @@ public class HomePage {
 	@FindBy(xpath = "//a[@id=\"ui-id-6\"]")
 	public WebElement gear;
 
-  //Women
+    //Women
 	@FindBy(xpath ="//*[@id='ui-id-4']")
 	public WebElement women;
+	
+	@FindBy(xpath ="//dl[@id='narrow-by-list2']//ol/li[1]")
+	public WebElement womenSubMunuTop;
+
+	@FindBy(xpath = "//*[@id=\"ui-id-9\"]") 
+	public WebElement topInWoman;
+	   
+	@FindBy(xpath = "//*[@id='ui-id-11']")
+	public WebElement JacketsInTops;
+	
+	
 	
 	//Men
 	@FindBy(xpath ="//ul[@id='ui-id-2']//a[@id='ui-id-5']")
@@ -65,13 +76,9 @@ public class HomePage {
 	@FindBy(xpath = "//ol[@class='items']/li")
 	public List<WebElement> ListOptions;
 	
-	//Women SubTops
-	@FindBy(xpath ="//dl[@id='narrow-by-list2']//ol/li[1]")
-	public WebElement womenSubMunuTop;
-
-   @FindBy(xpath = "//dl[@id='narrow-by-list2']//ol/li[1]/a")
-   public WebElement topInWoman;
     
+   
+
     
 //    @FindBy(xpath = "//select[@id='sorter']/option[3]")
 //    public WebElement sortByPrice;
