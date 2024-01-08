@@ -9,16 +9,15 @@ public class BB_TestCase_02 extends CommonMethods{
 	
 	@Test
 	public void addItemtoCart() {
-		getDriver();
-		clickOnMenuBar(hsp.hotSellerWidgetList,getProperty("ProductItemSelected_ForTestCase_BB_TestCase_02"));
+		clickOnMenuBar(hsp.hotSellerWidgetList,getProperty("ProductItemSelected_TestCase_02"));
 		click(ip.sizeS);
 		click(ip.colorblue);
 		click(ip.addToCartButton);
-		hardWait(1);
+		hardWait(2);
 		click(ip.goToCart);
-		waitForVisibility(ip.firstItemInCart);
 		Assert.assertTrue(
-				ip.firstItemInCart.getText().contains(getProperty("ProductItemSelected_ForTestCase_BB_TestCase_02")));
+				ip.itemInCartName.getText().contains(getProperty("ProductItemSelected_TestCase_02")));
+		removeItem();
 	}
 
 }

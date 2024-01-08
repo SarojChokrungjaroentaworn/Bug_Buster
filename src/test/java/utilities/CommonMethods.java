@@ -1,7 +1,6 @@
 package utilities;
 
 import java.io.File;
-
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -12,7 +11,6 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.NoSuchWindowException;
@@ -247,33 +245,40 @@ public class CommonMethods extends PageInitializer {
 	}
 
 	// check ascending and descending sort
-	public static boolean ascendingCompare(double[] input) {
+	public static boolean isAscendingOrder(double[] input) {
+		boolean output = true;
 		for (int i = 0; i < input.length - 1; i++) {
 			if (input[i] > input[i + 1]) {
-				return false;
+				output = false;
+				break;
 			}
 		}
-		return true;
+		return output;
 	}
 
-	public static boolean descendingCompare(double[] input) {
+	public static boolean isDescendingOrder(double[] input) {
+		boolean output = true;
 		for (int i = 0; i < input.length - 1; i++) {
 			if (input[i] < input[i + 1]) {
-				return false;
+				output = false;
+				break;
 			}
 		}
-		return true;
+		return output;
 	}
 
 	public static boolean priceRangeCompare(double[] input, String min, String max) {
 		double minn = Double.parseDouble(min);
 		double maxx = Double.parseDouble(max);
+		boolean output = true;
 
 		for (int i = 0; i < input.length; i++) {
-			if (input[i] >= minn && input[i] <= maxx)
-				return true;
+			if (input[i] < minn || input[i] > maxx) {
+				output = false;
+				break;
+			}
 		}
-		return false;
+		return output;
 	}
 
 	// get list of price
@@ -293,19 +298,44 @@ public class CommonMethods extends PageInitializer {
 		return output;
 	}
 
+	public static int getAmountItemFromList(List<WebElement> input) {
+		int amount = 0;
+		for (WebElement e : input) {
+			amount++;
+		}
+		return amount;
+	}
+
 	// Check String contains in another String
 	public static boolean compare(String actual, String expected) {
 		return actual.contains(expected);
 	}
 
 	public static boolean compareStringInList(List<WebElement> input, String expected) {
-
+		boolean output = false;
 		for (WebElement each : input) {
 			if (expected.contains(each.getText())) {
-				return true;
+				output = true;
+				break;
 			}
 		}
-		return false;
+		return output;
+	}
+
+	public static int changeStringToInt(String string) {
+		return Integer.parseInt(string);
+	}
+
+	public static void removeItem() {
+		try {
+			click(hp.logo);
+			hardWait(1);
+			click(ip.goToCart);
+			click(scp.trash);
+			click(scp.deleteItem);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 
 }

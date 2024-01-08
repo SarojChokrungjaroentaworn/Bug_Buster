@@ -17,6 +17,12 @@ public class SearchPage {
 	@FindBy(xpath = "//input[@id='search']")
 	public WebElement searchTextBox;
 	
+	@FindBy(xpath = "//[@id='maincontent']/div/h1/span")
+    public WebElement searchResults;
+	
+    @FindBy(xpath = "//[@class='products wrapper grid products-grid']/ol/li[2]/div/div[1]/strong/a")
+    public WebElement womensBag;
+	
 	}
 	
 	

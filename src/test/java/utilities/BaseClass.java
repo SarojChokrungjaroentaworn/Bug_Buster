@@ -6,15 +6,20 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.HomePage;
+import pages.ItemPage;
 import pages.LogInPage;
+import pages.ShoppingCartPage;
 
 public class BaseClass {
 	private static WebDriver driver;
@@ -57,21 +62,26 @@ public class BaseClass {
 
 	LogInPage lp = new LogInPage();
 	HomePage hp = new HomePage();
+	ItemPage ip = new ItemPage();
+	ShoppingCartPage scp = new ShoppingCartPage();
 
 	@BeforeMethod(alwaysRun = true)
 	public void login() {
 		CommonMethods.click(lp.signIn);
-		CommonMethods.sendKey(lp.lumaEmail,getProperty("email"));
-		CommonMethods.sendKey(lp.lumaPassword,getProperty("password"));
+		CommonMethods.sendKey(lp.lumaEmail, getProperty("email"));
+		CommonMethods.sendKey(lp.lumaPassword, getProperty("password"));
 		CommonMethods.click(lp.lumaSignInButton);
 	}
 
-//	@AfterMethod(alwaysRun = true)
+	@AfterMethod(alwaysRun = true)
 	public void logOut() {
-		if (hp.headerButton != null) {
+		try {
 			hp.headerButton.click();
 			CommonMethods.clickOnMenuBar(hp.header, getProperty("Luma_HeaderOptionSelected"));
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
 		}
+
 	}
 
 	// driver tear down method
