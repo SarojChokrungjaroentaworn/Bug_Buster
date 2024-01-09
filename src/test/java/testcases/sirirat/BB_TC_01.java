@@ -1,4 +1,4 @@
-package testcases.arad;
+package testcases.sirirat;
  
 import org.testng.Assert;
 import org.testng.annotations.Test;

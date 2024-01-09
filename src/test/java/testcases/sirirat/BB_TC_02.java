@@ -1,14 +1,14 @@
-package testcases.arad;
+package testcases.sirirat;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import utilities.CommonMethods;
 
-public class BB_TC_03 extends CommonMethods{
+public class BB_TC_02 extends CommonMethods{
 	
 	@Test
-	public void inputQtyLessThanMaximum() {
+	public void maximumPurchaseItem() {
 
 		hoverOverMouse(hp.women);
 		hoverOverMouse(hp.topOptionInWoman);
@@ -16,13 +16,9 @@ public class BB_TC_03 extends CommonMethods{
 		clickOnMenuBar(ip.brasAndTanksItemList,getProperty("BrasAndTank_FirstItem"));
 		click(ip.sizeM);
 		click(ip.colorPurple);
-		sendText(ip.qtyTextBox,getProperty("EnableAmount_PurchaseItem"));
+		sendText(ip.qtyTextBox,getProperty("Amount_maximumPurchaseItem"));
 		click(ip.addToCart);
-		hardWait(2);
-		click(ip.goToCart);
-		Assert.assertTrue(compare(scp.qtyTextBox.getAttribute("value"),"7914"));
-		hardWait(2);
-		removeItem();
+		Assert.assertTrue(compare(ip.alertMessage.getText(),getProperty("ErrorMessage_maximumPurchaseItem")));
 	}
 
 }

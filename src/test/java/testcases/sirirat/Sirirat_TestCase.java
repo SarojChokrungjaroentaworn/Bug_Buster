@@ -1,4 +1,4 @@
-package testcases.arad;
+package testcases.sirirat;
 
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
@@ -9,7 +9,7 @@ import utilities.ListensTestNG;
 import utilities.RetryAnalyzer;
 
 @Listeners(ListensTestNG.class)
-public class Arad_TestCase extends CommonMethods {
+public class Sirirat_TestCase extends CommonMethods {
 
 	@Test(retryAnalyzer = RetryAnalyzer.class)
 	public void verifyQuantityLimitPerPage() {
