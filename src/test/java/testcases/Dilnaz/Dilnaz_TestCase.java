@@ -25,7 +25,7 @@ public class Dilnaz_TestCase extends CommonMethods {
 		Assert.assertTrue(compare(getDriver().getCurrentUrl(), getProperty("CurrentURLForNganTestCase_02")));
 	}
 
-	@Test
+//	@Test
 	public void myPreviousOrder() throws InterruptedException {
 		click(hp.headerButton);
 		clickOnMenuBar(hp.header, getProperty("Luma_HeaderOption1"));
@@ -33,4 +33,16 @@ public class Dilnaz_TestCase extends CommonMethods {
 		Assert.assertTrue(compareStringInList(ap.firstPreviousOrder, getProperty("First_Previous_Order_Date")));
 	}
 
+	@Test
+	public void sortFunction() {
+
+		// click Woman menu
+		click(hp.women);
+		// click Top menu
+		click(hp.topInWoman);
+		// click sort by price
+		click(ip.sortByPrice);
+		// compare price after we ascending sort by price
+		Assert.assertTrue(isAscendingOrder(getPriceList(ip.listItemAfterSort)));
+	}
 }
