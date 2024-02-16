@@ -11,7 +11,7 @@ import utilities.RetryAnalyzer;
 @Listeners(ListensTestNG.class)
 public class Sirirat_TestCase extends CommonMethods {
 
-	@Test(retryAnalyzer = RetryAnalyzer.class)
+	@Test(priority = 1,retryAnalyzer = utilities.RetryAnalyzer.class)
 	public void verifyQuantityLimitPerPage() {
 
 		hoverOverMouse(hp.women);
@@ -23,7 +23,7 @@ public class Sirirat_TestCase extends CommonMethods {
 
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class)
+	@Test(priority = 3, retryAnalyzer = utilities.RetryAnalyzer.class)
 	public void maximumPurchaseItem() {
 
 		hoverOverMouse(hp.women);
@@ -37,7 +37,7 @@ public class Sirirat_TestCase extends CommonMethods {
 		Assert.assertTrue(compare(ip.alertMessage.getText(),getProperty("ErrorMessage_maximumPurchaseItem")));
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class)
+	@Test(priority = 2, retryAnalyzer = utilities.RetryAnalyzer.class)
 	public void inputQtyLessThanMaximum() {
 
 		hoverOverMouse(hp.women);
@@ -52,7 +52,7 @@ public class Sirirat_TestCase extends CommonMethods {
 		click(ip.goToCart);
 		Assert.assertTrue(compare(scp.qtyTextBox.getAttribute("value"),"7914"));
 		hardWait(2);
-		removeItem();
+//		removeItem();
 	}
 
 }

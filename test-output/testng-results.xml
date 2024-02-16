@@ -2,56 +2,56 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-09T11:13:01 EST" name="Default suite" finished-at="2024-01-09T11:13:38 EST" duration-ms="36264">
+  <suite started-at="2024-01-10T20:38:32 EST" name="Default suite" finished-at="2024-01-10T20:40:22 EST" duration-ms="110708">
     <groups>
     </groups>
-    <test started-at="2024-01-09T11:13:01 EST" name="Default test" finished-at="2024-01-09T11:13:38 EST" duration-ms="36264">
-      <class name="testcases.saroj.Saroj_TestCase">
-        <test-method is-config="true" signature="getDriver()[pri:0, instance:testcases.saroj.Saroj_TestCase@13a37e2a]" started-at="2024-01-09T11:13:01 EST" name="getDriver" finished-at="2024-01-09T11:13:01 EST" duration-ms="5" status="PASS">
+    <test started-at="2024-01-10T20:38:32 EST" name="Default test" finished-at="2024-01-10T20:40:22 EST" duration-ms="110708">
+      <class name="testcases.sirirat.Sirirat_TestCase">
+        <test-method is-config="true" signature="getDriver()[pri:0, instance:testcases.sirirat.Sirirat_TestCase@44afefd5]" started-at="2024-01-10T20:38:32 EST" name="getDriver" finished-at="2024-01-10T20:38:32 EST" duration-ms="79" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method is-config="true" signature="login()[pri:0, instance:testcases.saroj.Saroj_TestCase@13a37e2a]" started-at="2024-01-09T11:13:01 EST" name="login" finished-at="2024-01-09T11:13:03 EST" duration-ms="2135" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:testcases.sirirat.Sirirat_TestCase@44afefd5]" started-at="2024-01-10T20:38:32 EST" name="login" finished-at="2024-01-10T20:38:46 EST" duration-ms="14104" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="addItemtoCart()[pri:0, instance:testcases.saroj.Saroj_TestCase@13a37e2a]" started-at="2024-01-09T11:13:03 EST" name="addItemtoCart" finished-at="2024-01-09T11:13:09 EST" duration-ms="5222" status="PASS">
+        <test-method signature="verifyQuantityLimitPerPage()[pri:1, instance:testcases.sirirat.Sirirat_TestCase@44afefd5]" started-at="2024-01-10T20:38:46 EST" name="verifyQuantityLimitPerPage" finished-at="2024-01-10T20:39:01 EST" duration-ms="15148" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addItemtoCart -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:testcases.saroj.Saroj_TestCase@13a37e2a]" started-at="2024-01-09T11:13:09 EST" name="logOut" finished-at="2024-01-09T11:13:10 EST" duration-ms="1106" status="PASS">
+        </test-method> <!-- verifyQuantityLimitPerPage -->
+        <test-method is-config="true" signature="logOut()[pri:0, instance:testcases.sirirat.Sirirat_TestCase@44afefd5]" started-at="2024-01-10T20:39:01 EST" name="logOut" finished-at="2024-01-10T20:39:11 EST" duration-ms="9082" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="login()[pri:0, instance:testcases.saroj.Saroj_TestCase@13a37e2a]" started-at="2024-01-09T11:13:10 EST" name="login" finished-at="2024-01-09T11:13:12 EST" duration-ms="2631" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:testcases.sirirat.Sirirat_TestCase@44afefd5]" started-at="2024-01-10T20:39:11 EST" name="login" finished-at="2024-01-10T20:39:21 EST" duration-ms="10360" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="removeItemfromCart()[pri:0, instance:testcases.saroj.Saroj_TestCase@13a37e2a]" started-at="2024-01-09T11:13:12 EST" name="removeItemfromCart" finished-at="2024-01-09T11:13:22 EST" duration-ms="9346" status="PASS">
+        <test-method signature="inputQtyLessThanMaximum()[pri:2, instance:testcases.sirirat.Sirirat_TestCase@44afefd5]" started-at="2024-01-10T20:39:21 EST" name="inputQtyLessThanMaximum" finished-at="2024-01-10T20:39:43 EST" duration-ms="22371" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- removeItemfromCart -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:testcases.saroj.Saroj_TestCase@13a37e2a]" started-at="2024-01-09T11:13:22 EST" name="logOut" finished-at="2024-01-09T11:13:23 EST" duration-ms="991" status="PASS">
+        </test-method> <!-- inputQtyLessThanMaximum -->
+        <test-method is-config="true" signature="logOut()[pri:0, instance:testcases.sirirat.Sirirat_TestCase@44afefd5]" started-at="2024-01-10T20:39:43 EST" name="logOut" finished-at="2024-01-10T20:39:48 EST" duration-ms="4650" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="login()[pri:0, instance:testcases.saroj.Saroj_TestCase@13a37e2a]" started-at="2024-01-09T11:13:23 EST" name="login" finished-at="2024-01-09T11:13:25 EST" duration-ms="2548" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:testcases.sirirat.Sirirat_TestCase@44afefd5]" started-at="2024-01-10T20:39:48 EST" name="login" finished-at="2024-01-10T20:39:58 EST" duration-ms="10032" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="updateQuantityInCart()[pri:0, instance:testcases.saroj.Saroj_TestCase@13a37e2a]" started-at="2024-01-09T11:13:25 EST" name="updateQuantityInCart" finished-at="2024-01-09T11:13:36 EST" duration-ms="10572" status="PASS">
+        <test-method signature="maximumPurchaseItem()[pri:3, instance:testcases.sirirat.Sirirat_TestCase@44afefd5]" started-at="2024-01-10T20:39:58 EST" name="maximumPurchaseItem" finished-at="2024-01-10T20:40:16 EST" duration-ms="17992" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- updateQuantityInCart -->
-        <test-method is-config="true" signature="logOut()[pri:0, instance:testcases.saroj.Saroj_TestCase@13a37e2a]" started-at="2024-01-09T11:13:36 EST" name="logOut" finished-at="2024-01-09T11:13:37 EST" duration-ms="1412" status="PASS">
+        </test-method> <!-- maximumPurchaseItem -->
+        <test-method is-config="true" signature="logOut()[pri:0, instance:testcases.sirirat.Sirirat_TestCase@44afefd5]" started-at="2024-01-10T20:40:16 EST" name="logOut" finished-at="2024-01-10T20:40:21 EST" duration-ms="5309" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.saroj.Saroj_TestCase@13a37e2a]" started-at="2024-01-09T11:13:37 EST" name="tearDown" finished-at="2024-01-09T11:13:38 EST" duration-ms="271" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.sirirat.Sirirat_TestCase@44afefd5]" started-at="2024-01-10T20:40:21 EST" name="tearDown" finished-at="2024-01-10T20:40:22 EST" duration-ms="1221" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testcases.saroj.Saroj_TestCase -->
+      </class> <!-- testcases.sirirat.Sirirat_TestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
